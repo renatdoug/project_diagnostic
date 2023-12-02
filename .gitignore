@@ -135,3 +135,18 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+
+# Personal additions
+__pycache__/
+*.pyc
+__localcode
+venv
+env
+.DS_Store
+local_settings.py
+_local_settings.py
+static/
+
+
+# Add again
+!db.sqlite3
