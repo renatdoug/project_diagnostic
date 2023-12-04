@@ -11,4 +11,4 @@ def entrar(request):
 #    return HttpResponse('MInha página da Aplicação de apoio clinico para Diagnóstico de Enfermagem')
 
 def my_csand(request):
-    return render(request, "diagnostics/my_csand.html")
+    return render(request, "diagnostics/pages/my_csand.html")
