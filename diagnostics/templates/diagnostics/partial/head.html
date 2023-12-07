@@ -1,34 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css" integrity="sha512-8RxmFOVaKQe/xtg6lbscU9DU0IRhURWEuiI0tXevv+lXbAHfkpamD4VKFQRto9WgfOJDwOZ74c/s9Yesv3VvIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css" integrity="sha512-pZlKGs7nEqF4zoG0egeK167l6yovsuL8ap30d07kA5AJUq+WysFlQ02DLXAmN3n0+H3JVz5ni8SJZnrOaYXWBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    
-    <title>CSAND</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+    integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css"
+    integrity="sha512-8RxmFOVaKQe/xtg6lbscU9DU0IRhURWEuiI0tXevv+lXbAHfkpamD4VKFQRto9WgfOJDwOZ74c/s9Yesv3VvIQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css"
+    integrity="sha512-pZlKGs7nEqF4zoG0egeK167l6yovsuL8ap30d07kA5AJUq+WysFlQ02DLXAmN3n0+H3JVz5ni8SJZnrOaYXWBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        
-      }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
 
-      html {
-        font-size: 65.5%;
-      }
 
-      body {
-        font-size: 1.6rem;
-      }
+  <title>CSAND</title>
 
-    </style>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+
+    }
+
+    html {
+      font-size: 65.5%;
+    }
+
+    body {
+      font-family: sans-serif;
+      font-size: 1.6rem;
+      background: rgb(218, 214, 214);
+    }
+
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Roboto Slab', serif;
+    }
+
+    .container {
+      max-width: 144rem;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .main-header-container {
+      background: #13141f;
+    }
+
+    .main-logo {
+      font-size: 4rem;
+      color: white;
+      display: flex;
+      flex-flow: row nowrap;
+      width: fit-content;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .main-icon {
+      margin-right: 2rem;
+    }
+
+    .search-form {
+      border: .2rem solid rgb(63, 58, 58);
+      max-width: 64rem;
+      margin: 0 auto;
+      border-radius: .4rem;
+      position: relative;
+      transition: all 300ms ease-in-out;
+    }
+
+    .search-input,
+    .search-button {
+      border: none;
+      background: none;
+      outline: none;
+      padding: 1rem;
+      transition: all 300ms ease-in-out;
+    }
+
+    .search-input {
+      width: 100%;
+      padding-right: 3rem;
+    }
+
+    .search-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .search-button:focus {
+      outline: 1px solid white;
+      background: rgba(0, 0, 0, .1);
+    }
+
+    .search-form:focus-within {
+      border-color: rgb(13, 74, 243);
+      background: white;
+    }
+
+    .search-form:focus-within .search-button {
+      color: rgb(13, 74, 243)
+    }
+
+    .main-content{
+      padding-top: 0;
+    }
+    .main-content-list{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 4rem;
+    }
+
+    .csand{
+      background: orange;
+      box-shadow: -5px 5px 10px rgba(0, 0, 0, .2);
+      transform: scale(1);
+      transition: all 300ms ease-in-out;
+      
+
+    }
+
+    .csand img{
+      max-width: 100%;      
+
+    }
+    .csand-list-item{
+      max-width: 64rem;
+    }
+
+    .csand-list-item:hover{
+      transform: scale(1.03);
+    }
+  
+  </style>
 
 
 

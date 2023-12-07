@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 
@@ -12,3 +12,4 @@ def entrar(request):
 
 def my_csand(request):
     return render(request, "diagnostics/pages/my_csand.html")
+
